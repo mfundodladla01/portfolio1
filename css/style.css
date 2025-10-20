@@ -5,6 +5,12 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  
  */
+  
+	@font-face {
+  font-family: 'Gothic60';
+  src: url('Gothic60-Regular.otf') format('opentype');
+  font-weight: 400;
+}
 
 :root {
   --blue: #007bff;
@@ -43,8 +49,7 @@
   box-sizing: border-box; }
 
 html {
- font-family: 'LTSuperior' ;
-
+  font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -54,8 +59,11 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
- font-family: 'LTSuperior' ;
-
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  
+  line-height: 1.5;
   color: #212529;
   text-align: left;
   background-color: #edeec0; }
@@ -69,78 +77,16 @@ hr {
   height: 0;
   overflow: visible; }
 
-
-h1 {
+h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0;
-  font-size: 7.5em;
-  font-weight: 500;
-  line-height: 1;
+  margin-bottom: 0.5rem;
+font-family: 'Gothic60'!important; }
+h1{
+  font-family: 'Gothic60'; font-weight: 700;
 }
-
-h2 {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 5em;
-  font-weight: 500;
-  line-height: 1.05;
-}
-
-h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 2.5em;
-  font-weight: 500;
-  line-height: 1.1;
-}
-
-h4 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 1.75em;
-  font-weight: 500;
-  line-height: 1.15;
-}
-
-h5 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 1.25em;
-  font-weight: 500;
-  line-height: 1.2;
-}
-
 p {
-  margin-bottom: 0;
   margin-top: 0;
-  font-size: 1em;
-  font-family: 'LTSuperior'; 
-  line-height: 1.4;
-  font-weight: 500;
-}
-
-a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-
-
-@media screen and (max-width: 767px) {
-  h1 {
-    font-size: 4em;
-  }
-
-  h2 {
-    font-size: 3.25em;
-  }
-}
-
-
-
-strong {
-  font-weight: 600;
-}
+  margin-bottom: 1rem; }
 
 abbr[title],
 abbr[data-original-title] {
@@ -219,7 +165,7 @@ pre,
 code,
 kbd,
 samp {
-  
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em; }
 
 pre {
@@ -268,7 +214,7 @@ select,
 optgroup,
 textarea {
   margin: 0;
-  
+  font-family: inherit;
   font-size: inherit;
   line-height: inherit; }
 
@@ -370,26 +316,25 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-weight: 500;
- font-family: 'Gothic60'; }
+  line-height: 1.2; }
 
 h1, .h1 {
-  font-size: 2.5rem;
-font-family: 'Gothic60'; }
+  font-size: 2.5rem;font-family: 'Gothic60'; }
 
 h2, .h2 {
-  font-size: 2rem; }
+  font-size: 2rem; font-family: 'Gothic60';}
 
 h3, .h3 {
-  font-size: 1.75rem; }
+  font-size: 1.75rem; font-family: 'Gothic60';}
 
 h4, .h4 {
-  font-size: 1.5rem; }
+  font-size: 1.5rem; font-family: 'Gothic60';}
 
 h5, .h5 {
-  font-size: 1.25rem; }
+  font-size: 1.25rem;font-family: 'Gothic60'; }
 
 h6, .h6 {
-  font-size: 1rem; }
+  font-size: 1rem; font-family: 'Gothic60';}
 
 .lead {
   font-size: 1.25rem;
@@ -4608,8 +4553,10 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-
-  
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -4620,7 +4567,7 @@ a.close.disabled {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  
+  font-size: 0.875rem;
   word-wrap: break-word;
   opacity: 0; }
   .tooltip.show {
@@ -4691,7 +4638,10 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
- 
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
   text-align: left;
   text-align: start;
   text-decoration: none;
@@ -4702,7 +4652,7 @@ a.close.disabled {
   word-spacing: normal;
   white-space: normal;
   line-break: auto;
-  
+  font-size: 0.875rem;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: padding-box;
@@ -7621,8 +7571,7 @@ button.bg-dark:focus {
     margin-left: auto !important; } }
 
 .text-monospace {
- font-family: 'LTSuperior' !important;
- }
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important; }
 
 .text-justify {
   text-align: justify !important; }
@@ -7852,8 +7801,7 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 body {
-  font-family: 'LTSuperior' ;
-
+  font-family: "Poppins", Arial, sans-serif;
   background: #fff;
   font-size: 16px;
   line-height: 1.8;
@@ -7881,7 +7829,7 @@ h1, h2, h3, h4, h5,
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.8);
   font-weight: 400;
-   }
+  font-family: "Lora", serif; }
 
 .text-primary {
   color: #fdcb6e !important; }
@@ -7995,7 +7943,7 @@ h1, h2, h3, h4, h5,
 
 .menu-overlay__main {
 	color: #fff7e8;
-
+	font-family: 'Gothic60'!important;
 	font-size: clamp(2rem, 4.862vw + 0.936rem, 5.313rem);
 	line-height: 90%;
 	letter-spacing: -1.2px;
@@ -8021,10 +7969,10 @@ h1, h2, h3, h4, h5,
 	margin: 0;
 }
 
-
 .menu-overlay__socials ul {
 	display: flex;
 	gap: 14px;
+  font-family: sans-serif !important;
 	color: #fff7e8;
 	font-size: clamp(1rem, 0.55vw + 0.88rem, 1.375rem);
 	font-weight: 600;
@@ -8038,7 +7986,7 @@ h1, h2, h3, h4, h5,
 	padding: 14px;
 	border-radius: 10px;
 	background: #fff0dc;
-	
+	font-family: Anton, sans-serif;
 	align-items: center;
 	justify-content: center;
 }
@@ -8052,20 +8000,18 @@ h1, h2, h3, h4, h5,
 	will-change: transform;
 }
 #hero-section {
-  margin: 0 auto; /* centers the section horizontally */
-  width: 95%;
-  background-image: url("https://res.cloudinary.com/dbsuruevi/image/upload/v1757434246/ykdrxgvj0avjurlm1l5i.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+	background-image: url("https://res.cloudinary.com/dbsuruevi/image/upload/v1757434246/ykdrxgvj0avjurlm1l5i.png");
+	background-repeat: no-repeat;
+	background-position: center!important;
+	background-size: cover;
+  /*width: 95%;*/
   border-radius: 10px;
-  height: 100vh;
-  min-height: 700px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-block: 36px;
+	height: 100vh;
+	min-height: 700px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-block: 36px;
 }
 
 #hero-section .wrapper {
@@ -8076,7 +8022,8 @@ h1, h2, h3, h4, h5,
 	gap: 20px;
 }
 .hero__header {
-
+	font-family: Anton, sans-serif;
+	/* 	font-size: 130px; */
 	font-size: clamp(2.75rem, 7.89vw + 1.024rem, 8.125rem);
 	line-height: 99%;
 	letter-spacing: -2.6px;
@@ -8116,7 +8063,7 @@ h1, h2, h3, h4, h5,
   position: relative;
   z-index: 0; }
   .hero h1.vr {
-    font-family: "Barlow Condensed", Arial, sans-serif;
+    font-family: "Barlow Condensed", Arial, sans-serif !important;
     position: absolute;
     top: 50%;
     left: 0;
@@ -8342,7 +8289,7 @@ h1, h2, h3, h4, h5,
     font-weight: 900;
     color: #fff;
     font-size: 80px;
-   }
+    font-family: "Poppins", Arial, sans-serif; }
     @media (max-width: 991.98px) {
       .slider-text .bread {
         font-size: 50px; } }
@@ -8433,12 +8380,12 @@ h1, h2, h3, h4, h5,
       height: 400px; } }
 
 .ftco-intro h2 {
-  font-size: 50px; }
+  font-size: 60px; }
   .ftco-intro h2 span {
-    padding-left: 5px;
-    padding-right: 5px;
-    background: #BBDE10; 
-  border-radius: 10px;}
+    background: #BBDE10;
+  padding-left:5px;
+padding-right:5px; 
+border-radius:5px;}
 
 .services-section {
   padding: 0; }
@@ -8574,7 +8521,7 @@ textarea.form-control {
     font-size: 13px;
     font-weight: 900;
     text-transform: uppercase;
-    ;
+    font-family: "Poppins", Arial, sans-serif;
     letter-spacing: 3px; }
   .ftco-footer .ftco-footer-widget ul li a {
     color: rgba(255, 255, 255, 0.9); }
@@ -8702,12 +8649,11 @@ textarea.form-control {
   font-size: 14vw;
   font-weight: 900;
   line-height: 1.0;
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif!important;
   text-transform: uppercase;
   text-align: left; }
   .heading-section h2 span {
-   font-family: 'Gothic60';
-   font-size: 13vw;
+   
     font-weight: 400;
     display: block;
     text-align: right; }
@@ -8748,7 +8694,16 @@ border-radius: 10px; }
      
     }
 
-   
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 3.25em;
+  }
+}
 .portfolio-wrap {
   display: block;
   width: 100%;
@@ -8901,11 +8856,37 @@ border-radius: 10px; }
       color: #000000;
       font-weight: 700; }
     .portfolio-entry .one-half.half-text h2 {
-      font-size: 80px;
+      font-size: 60px;
       display: inline-block; }
-      @media (max-width: 767.98px) {
-        .portfolio-entry .one-half.half-text h2 {
-          font-size: 16vw; } }
+        .top h2 {
+      font-size: 60px;
+      display: inline-block; }
+    
+/* Tablet (medium) */
+@media (max-width: 1024px) {
+  .ftco-intro h2,
+  .portfolio-entry .one-half.half-text h2 {
+    font-size: 45px;
+  }
+}
+
+/* Large phone (small) */
+@media (max-width: 768px) {
+  .ftco-intro h2,
+  .portfolio-entry .one-half.half-text h2 {
+    font-size: 36px;
+  }
+}
+
+/* Small phone (extra small) */
+@media (max-width: 480px) {
+  .ftco-intro h2,
+  .portfolio-entry .one-half.half-text h2 {
+    font-size: 28px;
+  }
+}
+
+
       .portfolio-entry .one-half.half-text h2 a {
         color: #000000;
         padding-bottom: 10px;
@@ -9076,8 +9057,7 @@ border-radius: 10px; }
     -ms-border-radius: 4px;
     border-radius: 4px; }
   .testimony-wrap p {
-    font-family: 'LTSuperior' ;
-}
+    font-family: "Lora", serif; }
   .testimony-wrap .name {
     font-weight: 400;
     margin-bottom: 0;
@@ -9620,4 +9600,4 @@ a:hover {
   transition: transform 0.3s ease-in-out 0.1s;
   transform: translate(0); /* Move to center */
 }
-
+*{outline: red 1px solid;}
