@@ -7914,7 +7914,7 @@ h1, h2, h3, h4, h5,
 	width: 100%;
 	height: 100%;
 }
-.menu-overlay__links a{font-family: 'Gothic60'; font-weight: 700;}
+.menu-overlay__links a{ font-weight: 700;}
 .menu-overlay__links {
 	background: rgba(29, 20, 4, 0.21);
 	backdrop-filter: blur(67px);

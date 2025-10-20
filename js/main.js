@@ -1,3 +1,4 @@
+// AOS Animation
  AOS.init({
  	duration: 800,
  	easing: 'slide'
@@ -415,28 +416,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			0
 		)
 		// Animate menu links in
-		.add(() => {
-			const linkTexts = document.querySelectorAll("[data-text-anim]");
- // Register plugin first
-  gsap.registerPlugin(SplitText);
-
-			linkTexts.forEach((el) => {
-				gsap.set(el, { visibility: "visible" });
-
-				const split = SplitText.create(el, {
-					type: "chars",
-					smartWrap: true,
-					mask: "chars"
-				});
-
-				menuTimeline.fromTo(
-					split.chars,
-					{ yPercent: -200 },
-					{ yPercent: 0, ease: "power2.inOut", duration: 0.5, stagger: 0.01 },
-					0.2
-				);
-			});
-		}, 0)
+		
 		// Animate toggle button
 		.to(
 			".toggle-line-top",

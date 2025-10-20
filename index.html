@@ -9,12 +9,59 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
 <!-- ✅ GSAP core -->
+<!-- ✅ GSAP core -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
-<!-- ✅ SplitText plugin (official, free, and works) -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script>
+// ✅ Simple open-source SplitText replacement
+function splitText(el, type = "chars") {
+  const text = el.textContent.trim();
+  el.textContent = "";
 
-<!-- Your script that uses GSAP -->
+  const fragment = document.createDocumentFragment();
+
+  if (type === "chars") {
+    text.split("").forEach(char => {
+      const span = document.createElement("span");
+      span.textContent = char === " " ? "\u00A0" : char; // preserve spaces
+      fragment.appendChild(span);
+    });
+  } else if (type === "words") {
+    text.split(" ").forEach(word => {
+      const span = document.createElement("span");
+      span.textContent = word;
+      fragment.appendChild(span);
+      fragment.appendChild(document.createTextNode(" "));
+    });
+  } else if (type === "lines") {
+    text.split("\n").forEach(line => {
+      const div = document.createElement("div");
+      div.textContent = line;
+      fragment.appendChild(div);
+    });
+  }
+
+  el.appendChild(fragment);
+  return el.querySelectorAll("span, div");
+}
+
+// ✅ Menu animation
+document.addEventListener("DOMContentLoaded", () => {
+  const linkTexts = document.querySelectorAll("[data-text-anim]");
+
+  linkTexts.forEach(el => {
+    gsap.set(el, { visibility: "visible" });
+
+    const chars = splitText(el, "chars");
+
+    gsap.fromTo(
+      chars,
+      { yPercent: -200 },
+      { yPercent: 0, ease: "power2.inOut", duration: 0.5, stagger: 0.01 }
+    );
+  });
+});
+</script>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:900&display=swap" rel="stylesheet">
@@ -56,21 +103,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-	<script>
-document.addEventListener("DOMContentLoaded", () => {
-  gsap.registerPlugin(SplitText);
 
-  const split = new SplitText(".text", { type: "chars" });
-
-  gsap.from(split.chars, {
-    opacity: 0,
-    y: 40,
-    stagger: 0.05,
-    duration: 0.8,
-    ease: "power3.out"
-  });
-});
-</script>
 
   </head>
   <body>
