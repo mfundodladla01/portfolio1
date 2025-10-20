@@ -9596,4 +9596,3 @@ a:hover {
   transition: transform 0.3s ease-in-out 0.1s;
   transform: translate(0); /* Move to center */
 }
-*{outline: red 1px solid;}
