@@ -417,6 +417,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		// Animate menu links in
 		.add(() => {
 			const linkTexts = document.querySelectorAll("[data-text-anim]");
+ // Register plugin first
+  gsap.registerPlugin(SplitText);
 
 			linkTexts.forEach((el) => {
 				gsap.set(el, { visibility: "visible" });
